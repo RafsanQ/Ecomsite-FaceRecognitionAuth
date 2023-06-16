@@ -13,7 +13,7 @@
       </div>
       <ul>
 
-          <button><RouterLink :to="{name: 'DashboardRoute', params: {username: 'rafsan', email: 'rafsan.quayes@gnaul.com'}}">Sign in</RouterLink></button>
+          <button @click="handleLogin">Sign in</button>
 
           <button><RouterLink :to="{name: 'RegisterRoute'}">Register</RouterLink></button>
       </ul>
@@ -24,7 +24,20 @@
 
 
 <script>
+  export default {
+    data() {
+          return {
 
+          }
+    },
+    methods: {
+      handleLogin() {
+        this.$router.push({name: 'DashboardRoute', params: {username: 'rafsan', email: 'rafsan.quayes@gnaul.com'}})
+        
+      } 
+
+    }
+  }
 </script>
   
 <style scoped>
