@@ -24,7 +24,23 @@
             handleSumit(){
                 console.log('Email:', this.email)
                 console.log('Username:', this.username)
-                
+                window.faceio.enroll({
+                    "local": "auto",
+                    "payload":{
+                        "whoami": this.username,
+                        "email": this.email
+                    }
+                }).then(userInfo => {
+                    // User Successfully enrolled
+                    alert(`User Successfully Enrolled! Details:
+                            Unique Facial ID: ${userInfo.facialId}
+                            Enrollment Date: ${userInfo.timestamp}`)
+                    console.log(userInfo)
+                    // handle success, save the facial ID (userInfo.facialId), redirect to the dashboard...
+                    this.$router.push({name: 'home'})
+                }).catch(err => {
+                    console.log(err)
+                })
             }
         }
     }
