@@ -12,8 +12,10 @@
           <img src=""/>
       </div>
       <ul>
-          <li><RouterLink :to="{name: 'SignInRoute'}">Sign in</RouterLink></li>
-          <li><RouterLink :to="{name: 'RegisterRoute'}">Register</RouterLink></li>
+
+          <button class="signin">Sign in</button>
+
+          <button class="register"><RouterLink :to="{name: 'RegisterRoute'}">Register</RouterLink></button>
       </ul>
     </nav>
 
@@ -44,10 +46,26 @@ nav > ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    
 }
 
 nav > ul > li {
     margin: 0 1rem;
 }
+
+nav > ul > button {
+  background-color: rgb(95, 119, 133);
+  border: none;
+  color: eee;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 1rem
+
+}
+
+
+
+
 </style>
