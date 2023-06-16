@@ -12,7 +12,6 @@
           <img src=""/>
       </div>
       <ul>
-
           <button @click="handleLogin">Sign in</button>
 
           <button><RouterLink :to="{name: 'RegisterRoute'}">Register</RouterLink></button>
@@ -25,14 +24,19 @@
 
 <script>
   export default {
-    data() {
-          return {
-
-          }
-    },
     methods: {
       handleLogin() {
-        this.$router.push({name: 'DashboardRoute', params: {username: 'rafsan', email: 'rafsan.quayes@gnaul.com'}})
+        window.faceio.authenticate({
+                    "locale": "auto" // Default user locale
+                }).then(userData => {
+                    console.log("Success, user identified")
+                    console.log("Linked facial Id: " + userData.facialId)
+                    console.log("Payload: " + JSON.stringify(userData.payload)) // {"whoami": 123456, "email": "john.doe@example.com"} from the enroll() example above
+
+                    this.$router.push({name: 'DashboardRoute', params: {username: userData.payload.whoami, email: userData.payload.email}})
+                }).catch(errCode => {
+                    console.log(errCode)
+             })
         
       } 
 
