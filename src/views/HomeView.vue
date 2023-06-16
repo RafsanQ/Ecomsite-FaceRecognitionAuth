@@ -32,6 +32,7 @@
                     console.log("Success, user identified")
                     console.log("Linked facial Id: " + userData.facialId)
                     console.log("Payload: " + JSON.stringify(userData.payload)) // {"whoami": 123456, "email": "john.doe@example.com"} from the enroll() example above
+                    this.user=userData.payload.whoami
 
                     this.$router.push({name: 'DashboardRoute', params: {username: userData.payload.whoami, email: userData.payload.email}})
                 }).catch(errCode => {

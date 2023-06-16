@@ -13,7 +13,7 @@
       </div>
       <ul>
 
-          <button>Sign out</button>
+        <button><RouterLink :to="{name: 'home'}">Sign out</RouterLink></button>
           
       </ul>
     </nav>
