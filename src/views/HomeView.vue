@@ -13,7 +13,7 @@
       </div>
       <ul>
 
-          <button>Sign in</button>
+          <button><RouterLink :to="{name: 'DashboardRoute', params: {username: 'rafsan', email: 'rafsan.quayes@gnaul.com'}}">Sign in</RouterLink></button>
 
           <button><RouterLink :to="{name: 'RegisterRoute'}">Register</RouterLink></button>
       </ul>
