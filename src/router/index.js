@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import RegisterView from '../views/RegisterView.vue'
+import NotFound from '../views/NotFound.vue'
+import DashboardView from '../views/DashboardView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,7 +26,20 @@ const router = createRouter({
       path: '/register',
       name: 'RegisterRoute',
       component: RegisterView
+    },
+    {
+      path: '/dashboard',
+      name: 'DashboardRoute',
+      component: DashboardView
+    },
+
+    // Catchall 404
+    {
+      path: '/:catchall(.*)',
+      name: 'NotFound',
+      component: NotFound
     }
+
   ]
 })
 

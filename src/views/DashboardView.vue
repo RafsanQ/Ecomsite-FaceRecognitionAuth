@@ -18,12 +18,34 @@
       </ul>
     </nav>
 
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 m-auto">
+                    <h1 class="display-4 text-center">Welcome!</h1>
+                    <p class="lead text-center">
+                        This is a simple example of a full-page application.
+                    </p>
+
+                    <h2>The Username is {{ Username }} and Email is {{ email }}</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
     
 </template>
 
 
 <script>
-
+    export default {
+        data() {
+            return {
+                Username: '',
+                email: ''
+            }
+        }
+    }
 </script>
   
 <style scoped>
