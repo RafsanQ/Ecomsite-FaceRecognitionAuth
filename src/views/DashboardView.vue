@@ -27,7 +27,7 @@
                         This is a simple example of a full-page application.
                     </p>
 
-                    <h2>The Username is {{ Username }} and Email is {{ email }}</h2>
+                    <h2>The Username is {{ username }} and Email is </h2>
 
                 </div>
             </div>
@@ -41,7 +41,7 @@
     export default {
         data() {
             return {
-                Username: '',
+                username: this.$route.params.username,
                 email: ''
             }
         }
