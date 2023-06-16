@@ -13,9 +13,9 @@
       </div>
       <ul>
 
-          <button class="signin">Sign in</button>
+          <button>Sign in</button>
 
-          <button class="register"><RouterLink :to="{name: 'RegisterRoute'}">Register</RouterLink></button>
+          <button><RouterLink :to="{name: 'RegisterRoute'}">Register</RouterLink></button>
       </ul>
     </nav>
 
@@ -53,7 +53,6 @@ nav > ul > li {
 }
 
 nav > ul > button {
-  background-color: rgb(95, 119, 133);
   border: none;
   color: eee;
   padding: 15px 32px;

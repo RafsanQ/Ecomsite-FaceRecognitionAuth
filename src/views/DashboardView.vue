@@ -12,7 +12,9 @@
           <img src=""/>
       </div>
       <ul>
-          Sign Out
+
+          <button>Sign out</button>
+          
       </ul>
     </nav>
 
@@ -43,10 +45,25 @@ nav > ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    
 }
 
 nav > ul > li {
     margin: 0 1rem;
 }
+
+nav > ul > button {
+  border: none;
+  color: eee;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 1rem
+
+}
+
+
+
+
 </style>
